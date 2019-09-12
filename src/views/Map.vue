@@ -16,11 +16,14 @@
         </div>
       </template>
     </amplify-connect>
+    <br />
+    <CreatePlace />
   </div>
 </template>
 
 <script>
 import { listPlaces } from "@/graphql/queries";
+import CreatePlace from "@/components/CreatePlace";
 
 export default {
   data() {
@@ -37,6 +40,9 @@ export default {
     listPlacesQuery() {
       return this.$Amplify.graphqlOperation(listPlaces);
     }
+  },
+  components: {
+    CreatePlace
   }
 };
 </script>

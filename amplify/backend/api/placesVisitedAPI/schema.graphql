@@ -1,0 +1,6 @@
+type Place @model {
+  id: ID!
+  name: String!
+  latitude: Float!
+  longitude: Float!
+}
